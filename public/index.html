@@ -1,13 +1,73 @@
 <html>
 
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Meowy</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <header>
+    <div id="general-info">
+      <h1>Meowy</h1>
+      <input type="text" id="search-bar">
+      <a id="Login" href="#">Login As Mechant</a>
+      <a id="Login" href="#">Login As customer</a>
+      <a id="shopping-cart" href="#">your cart</a>
+    </div>
+
+    <div id="navbar">
+      <div class="dropdown">
+        <button class="menu-btn">Shop By Animal<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="#">Shop By Dog</a>
+          <a href="#">Shop By Cat</a>
+          <a href="#">Shopy By Fish</a>
+          <a href="#">Other</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="menu-btn">Shop By Brands<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-content">
+          <a href="#">Instinct</a>
+          <a href="#">Wellness</a>
+          <a href="#">Orijen</a>
+          <a href="#">Other</a>
+        </div>
+      </div>
+      <a href="#">Weekly Deal</a>
+    </div>
+  </header>
+  <main>
+    <div id="slideshow-container">
+      <div class="slides">
+        <img src="stylesheets/img/slide-1.jpeg" alt="slideshow picture">
+      </div>
+      <div class="slides">
+        <img src="stylesheets/img/slide-2.png" alt="slideshow picture">
+      </div>
+      <div class="slides">
+        <img src="stylesheets/img/slide-3.png" alt="slideshow picture">
+      </div>
+      <!-- <div id="slideshow-btn">
+        <a class="prev" onclick="nextSlide">&#10094; </a>
+        <a class="next" onclick="nextSlide">&#10095; </a>
+      </div> -->
+      <div id="slidesshow-dot">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+    </div>
+
+    <div id="results">
+    <h2>Our Best Selling</h2>
+    
+    </div>
+
+  </main>
+  <footer></footer>
+  <script src="javascript/slidesshow.js"></script>
 </body>
 
 </html>

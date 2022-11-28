@@ -1,8 +1,127 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
 }
+
+body {
+  background-color: blue;
+}
+
 
 a {
   color: #00B7FF;
+}
+
+/* CSS for Header */
+header {
+  padding: 10px;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#general-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#general-info a {
+  text-decoration: none;
+}
+
+/* CSS for Navbar */
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+}
+
+#navbar .dropdown, #navbar .menu-btn {
+  flex-grow: 1;
+  border: none;
+}
+
+#navbar .dropdown .menu-btn, #navbar a {
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+#navbar .dropdown .menu-btn:hover, #navbar a:hover {
+  background-color: antiquewhite;
+  color: blue;
+}
+
+#navbar .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: red;
+  min-width: 200px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+  text-align: left;
+  padding: 12px 16px;
+  z-index: 100;
+}
+
+#navbar .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* CSS for SlidesShow */
+
+#slideshow-container {
+  max-width: 100%;
+  max-height: 400px;
+  position: relative;
+  background-color: white;
+}
+
+.slides {
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto;
+  display: none;
+}
+
+.slides img {
+  width: 400px;
+  height: 300px;
+}
+
+#slidesshow-dot {
+  text-align: center;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: red;
+}
+
+/* CSS for Results*/
+
+#results {
+  background-color: blue;
 }
