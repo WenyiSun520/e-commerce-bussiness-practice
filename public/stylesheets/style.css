@@ -117,11 +117,28 @@ header {
 }
 
 .active {
-  background-color: red;
+  background-color: blue;
 }
 
 /* CSS for Results*/
 
 #results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: blue;
+}
+
+/* CSS For Single Product */
+.product-window {
+  margin: 10px;
+  padding: 10px;
+  border: solid 2px black ;
+  width: 300px;
+  height:fit-content;
+}
+
+.product-pic {
+  width:250px;
+  height:300px
 }
