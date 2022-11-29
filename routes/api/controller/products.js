@@ -1,11 +1,18 @@
 import express from "express";
 let router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/:pet?", async (req, res) => {
   try {
-    let allProducts = await req.models.Products.find();
-    let resultsArr = [];
-
+    
+    let petType = req.query.pet;
+     let allProducts=""
+    if(petType == undefined){
+    allProducts = await req.models.Products.find();
+    }else{
+    allProducts = await req.models.Products.find({petsTag: petType});
+    }
+  
+ let resultsArr = [];
     allProducts.forEach((item) => {
       let newProduct = `
     <div class="product-window">
@@ -16,8 +23,10 @@ router.get("/", async (req, res) => {
     <p>Description: ${item.description}</p>
     </div>
            `;
-    console.log("newproducts: " + newProduct);
-    resultsArr.push(newProduct);
+
+      //debug:
+      //console.log("newproducts: " + newProduct);
+      resultsArr.push(newProduct);
     });
     res.json(resultsArr);
   } catch (err) {

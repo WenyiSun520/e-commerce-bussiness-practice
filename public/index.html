@@ -9,7 +9,7 @@
 <body>
   <header>
     <div id="general-info">
-            <h1><a href="index.html">Meowy</a></h1>
+      <h1><a href="index.html">Meowy</a></h1>
       <input type="text" id="search-bar">
       <a id="Login" href="mechant.html">Login As Mechant</a>
       <a id="Login" href="#">Login As customer</a>
@@ -20,11 +20,11 @@
       <div class="dropdown">
         <button class="menu-btn">Shop By Animal<i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
-          <a href="#">Shop All</a>
-          <a href="#">Shop By Dog</a>
-          <a href="#">Shop By Cat</a>
-          <a href="#">Shopy By Fish</a>
-          <a href="#">Other</a>
+          <a href="shopby.html?pet=all">Shop All</a>
+          <a href="shopby.html?pet=dog">Shop By Dog</a>
+          <a href="shopby.html?pet=cat">Shop By Cat</a>
+          <a href="shopby.html?pet=fish">Shopy By Fish</a>
+          <a href="shopby.html?pet=other">Other</a>
         </div>
       </div>
       <div class="dropdown">
@@ -61,12 +61,8 @@
         <span class="dot" onclick="currentSlide(2)"></span>
       </div>
     </div>
-<h2>Our Best Selling</h2>
-    <div id="results">
-    
-
-    </div>
-
+    <h2>All products</h2>
+    <div id="results"></div>
   </main>
   <footer></footer>
   <script src="javascript/slidesshow.js"></script>
