@@ -37,7 +37,7 @@ async function postProducts(e) {
 
   //let responseJson = await response.json();
 
-  let inputFeedback = document.getElementById("showfeedback");
+  let inputFeedback = document.querySelector(".showfeedback");
   if (responseJson.status == "Success") {
     inputFeedback.textContent = "Success!";
   } else {

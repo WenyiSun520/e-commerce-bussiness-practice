@@ -8,24 +8,26 @@ async function main() {
   console.log("successfully connected to mongodb!");
 
   const productSchema = new mongoose.Schema({
-      name: String,
-      brand: String,
-      petsTag: [String],
-      price: Number,
-      // avg_rating: Number,
-      description: String,
-      // img: {
-      //     data: Buffer,
-      //     contentType: String
-      // }
-  })
+    name: String,
+    brand: String,
+    petsTag: [String],
+    price: Number,
+    // avg_rating: Number,
+    description: String,
+    // img: {
+    //     data: Buffer,
+    //     contentType: String
+    // }
+  });
 
-  models.Products = mongoose.model('Products', productSchema);
-//   const userSchema = new mongoose.Schema({
-//       username: String,
-//       fav_product: [Number]
-//   })
-// }
+  models.Products = mongoose.model("Products", productSchema);
+
+  const userSchema = new mongoose.Schema({
+    username: String,
+    email: String,
+    passwords: String,
+  });
+  models.Users = mongoose.model("Users", userSchema);
 }
 
 export default models;

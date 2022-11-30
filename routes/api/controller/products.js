@@ -6,7 +6,7 @@ router.get("/:pet?", async (req, res) => {
     
     let petType = req.query.pet;
      let allProducts=""
-    if(petType == undefined){
+    if(petType == undefined || petType == "all"){
     allProducts = await req.models.Products.find();
     }else{
     allProducts = await req.models.Products.find({petsTag: petType});

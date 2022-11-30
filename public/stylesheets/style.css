@@ -147,7 +147,55 @@ header {
   text-justify: center;
 }
 
-#product-form {
+/* CSS for Signup Window */
+button:hover {
+  opacity: 0.8;
+}
+
+input:focus, textarea:focus {
+  background-color: aqua;
+}
+
+#customer-signup {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+#customer-signup .signup-container {
+  text-align: center;
+}
+
+#customer-signup .signup-container span {
+
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+
+}
+
+#customer-signup .signup-container form {
+  background-color: white;
+
+
+}
+
+
+
+#product-form, #customer-signup .signup-container form {
+  size:18px;
   display: flex;
   flex-direction: column;
   padding: 10px;
