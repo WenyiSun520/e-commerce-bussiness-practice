@@ -8,8 +8,6 @@ This project mock up **Chewy.com** and it is for **personal pracice** aiming to 
 - Session Management: Redis
 
 Future Plan:
-- Current version is still in vanilla Javascript
-- Will change to React later
 - Use Redux to manage states when chaning 
 
 
