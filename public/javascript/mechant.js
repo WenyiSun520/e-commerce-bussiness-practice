@@ -1,4 +1,4 @@
-document.getElementById("showfeedback").textContent = "";
+document.querySelector(".showfeedback").textContent = "";
 let form = document.getElementById("product-form");
 form.addEventListener("submit", postProducts);
 
@@ -34,8 +34,6 @@ async function postProducts(e) {
       product_description: description,
     },
   });
-
-  //let responseJson = await response.json();
 
   let inputFeedback = document.querySelector(".showfeedback");
   if (responseJson.status == "Success") {

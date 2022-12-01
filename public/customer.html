@@ -7,45 +7,78 @@
 </head>
 
 <body>
-    <header>
-        <div id="general-info">
-            <h1><a href="index.html">Meowy</a></h1>
-            <input type="text" id="search-bar">
-            <a id="Login" href="mechant.html">Login As Mechant</a>
-            <a id="Login" href="#">Login As customer</a>
-            <a id="shopping-cart" href="#">your cart</a>
-        </div>
+<header>
+    <div id="general-info">
+        <h1><a href="index.html">Meowy</a></h1>
+        <input type="text" id="search-bar">
+        <a id="Login" href="mechant.html">Login As Mechant</a>
+        <p><a href="/signin" id="loginLink" class="nav-item">Log In</a></p>
+        <p><a href="/signout" id="logoutLink" class="d-none nav-item">Log Out</a></p>
+        <button id="login" onclick="document.getElementById('customer-signup').style.display='block'">Login As
+            Customer</button>
 
-        <div id="navbar">
-            <div class="dropdown">
-                <button class="menu-btn">Shop By Animal<i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="shopby.html?pet=all">Shop All</a>
-                    <a href="shopby.html?pet=dog">Shop By Dog</a>
-                    <a href="shopby.html?pet=cat">Shop By Cat</a>
-                    <a href="shopby.html?pet=fish">Shopy By Fish</a>
-                    <a href="shopby.html?pet=other">Other</a>
-                </div>
+        <div id="welcome-msg"></div>
+        <div id="customer-signup">
+            <div class="signup-container">
+                <span onclick="document.getElementById('customer-signup').style.display='none'">&times;</span>
+                <form id="user-form">
+                    <h2>Sign Up</h2>
+                    <label>Username</label>
+                    <input id="username" type="text" placeholder="Enter your username" required />
+
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="Enter Email" required />
+
+                    <label>password</label>
+                    <input id="passwords" type="password" placeholder="Create passwords" required />
+
+                    <label>Confirm password</label>
+                    <input id="re-passwords" type="password" placeholder="Re-enter passwords"
+                        onchange="checkpasswords()" required />
+                    <div class="showfeedback"></div>
+                    <button id="signup-btn" type="submit"
+                        onclick="document.getElementById('customer-signup').style.display='none' " disabled>Sign
+                        Up</button>
+
+                </form>
             </div>
-            <div class="dropdown">
-                <button class="menu-btn">Shop By Brands<i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a href="#">Shop All</a>
-                    <a href="#">Instinct</a>
-                    <a href="#">Wellness</a>
-                    <a href="#">Orijen</a>
-                    <a href="#">Other</a>
-                </div>
-            </div>
-            <a href="#">Weekly Deal</a>
         </div>
-    </header>
+        <a id="shopping-cart" href="#">your cart</a>
+    </div>
+
+    <div id="navbar">
+        <div class="dropdown">
+            <button class="menu-btn">Shop By Animal<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="shopby.html?pet=all">Shop All</a>
+                <a href="shopby.html?pet=dog">Shop By Dog</a>
+                <a href="shopby.html?pet=cat">Shop By Cat</a>
+                <a href="shopby.html?pet=fish">Shopy By Fish</a>
+                <a href="shopby.html?pet=other">Other</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="menu-btn">Shop By Brands<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Shop All</a>
+                <a href="#">Instinct</a>
+                <a href="#">Wellness</a>
+                <a href="#">Orijen</a>
+                <a href="#">Other</a>
+            </div>
+        </div>
+        <a href="#">Weekly Deal</a>
+    </div>
+</header>
     <main>
         
     </main>
     <footer></footer>
+    <script src="javascript/header.js"></script>
     <script src="javascript/slidesshow.js"></script>
     <script src="javascript/index.js"></script>
+    <script src="javascript/utils.js"></script>
+
 
 </body>
 
