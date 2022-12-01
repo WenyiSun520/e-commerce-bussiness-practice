@@ -6,6 +6,7 @@ This project mocked up **Chewy.com**
 - DataBase:MongoDB
 - User Auth: Microsoft Azure
 - Session Management: Redis
+
 Future Plan:
 - Current version is still in vanilla Javascript
 - Will change to React later
