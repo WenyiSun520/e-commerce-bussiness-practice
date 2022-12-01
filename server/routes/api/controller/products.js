@@ -14,19 +14,18 @@ router.get("/:pet?", async (req, res) => {
   
  let resultsArr = [];
     allProducts.forEach((item) => {
-      let newProduct = `
-    <div class="product-window">
-    <img class="product-pic" src="../stylesheets/img/preview.jpeg" alt="product preview"/>
-    <p><strong>${item.name}</strong></p>
-    <p><strong>${item.brand}</strong> ${item.petsTag} </p>
-    <p>price: $${item.price}</p>
-    <p>Description: ${item.description}</p>
-    </div>
-           `;
+      let productObj = {
+        name: item.name,
+        brand: item.brand,
+        petsTag: item.petsTag,
+        price: item.price,
+        description: item.description,
+      };
 
       //debug:
       //console.log("newproducts: " + newProduct);
-      resultsArr.push(newProduct);
+      resultsArr.push(productObj);
+      //resultsArr.push(newProduct);
     });
     res.json(resultsArr);
   } catch (err) {
@@ -57,7 +56,7 @@ router.post("/", async (req, res) => {
     });
 
     await newProduct.save();
-    res.send({ status: "Success" });
+    res.send({ status: "Success"});
   } catch (err) {
     console.log("Error saving your product:" + err);
     res.send({ status: "Fail", error: err });

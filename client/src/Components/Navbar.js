@@ -1,6 +1,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleDown } from "@fortawesome/free-regular-svg-icons";
+import { Link } from "react-router-dom";
 
 
 export default function Navbar(){
@@ -11,11 +12,11 @@ export default function Navbar(){
             Shop By Animal <FontAwesomeIcon icon={faArrowAltCircleDown} />
           </button>
           <div className="dropdown-content">
-            <a href="shopby.html?pet=all">Shop All</a>
-            <a href="shopby.html?pet=dog">Shop By Dog</a>
-            <a href="shopby.html?pet=cat">Shop By Cat</a>
-            <a href="shopby.html?pet=fish">Shopy By Fish</a>
-            <a href="shopby.html?pet=other">Other</a>
+            <Link to="/shopby/all">Shop All</Link>
+            <Link to="/shopby/dog">Shop By Dog</Link>
+            <Link to="/shopby/cat">Shop By Cat</Link>
+            <Link to="/shopby/fish">Shop By Fish</Link>
+            <Link to="/shopby/other">Shop Other</Link>
           </div>
         </div>
         <div className="dropdown">

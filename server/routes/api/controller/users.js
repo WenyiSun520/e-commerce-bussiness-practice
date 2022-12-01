@@ -67,23 +67,28 @@ router.post("/signup", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     let sess = req.session;
-    let { email, password } = req.body;
+    let { email, passwords } = req.body;
+    //debug:
+    console.log("req.body.password: " + passwords);
+    console.log("req.body.email: " + email);
     let foundUser = await req.models.Users.findOne({ email: email });
+    //debug:
+    console.log("User FOund: "+foundUser)
     if (foundUser == null) {
-      res.json({ status: "Fail", error: "we can't find your account!" });
+      res.json({ status: "Fail", msg: "Account not found! Please consider Sign up" });
     } else {
-      if (foundUser.passwords != password) {
+      if (foundUser.passwords != passwords) {
         res.json({
           status: "Fail",
-          error: "Wrong passwords, please try again!",
+          msg: "Wrong passwords, please try again!",
         });
       } else {
         sess.email = email;
-        sess.password = password;
+        sess.passwords = passwords;
         // add username and password validation logic here if you want.If user is authenticated send the response as success
        let msg = `
-        <h1>Welcome ${foundUser.username} </h1><br>
-        <h3>This is the Home page</h3>
+        <p>Welcome <strong>${foundUser.username} </strong></p><br>
+        <p>This is the Home page</p>
         <button id="logout" onclick="logOut()">Click here to log out</button>
         `
         res.send({status:"success", msg:msg});

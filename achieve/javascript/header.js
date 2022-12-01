@@ -32,7 +32,7 @@ async function postNewUser(e) {
   });
 
   //show welcome message
-  document.getElementById("welcome-msg").innerHTML = responseJson.msg
+  document.getElementById("welcome-msg").innerHTML = responseJson.msg;
 }
 function closeCustomerSignUp() {
   let signupWindow = document.getElementById("customer-signup");
