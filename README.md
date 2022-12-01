@@ -1,6 +1,6 @@
 # E-Commerce-Bussiness-Practice
-This project is for personal pracice aiming to examine front-end and back-end skills
-This project mocked up **Chewy.com**
+This project mock up **Chewy.com** and it is for **personal pracice** aiming to examine front-end and back-end skills
+
 - Front-end: HTML, CSS, JavaScript, React.js
 - Back-end: JavaScript, node.js, express.js
 - DataBase:MongoDB
